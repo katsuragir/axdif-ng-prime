@@ -1,0 +1,49 @@
+<div class="grid overflow-hidden min-w-screen">
+    <div class="block md:hidden col-12 bg-white h-full">
+        <h1 class="text-[#18266A] mb-0">axdif</h1>
+    </div>
+    <div class="md:col-4 card-banner-auth hidden md:block">
+        <app-banner-auth></app-banner-auth>
+    </div>
+    <div class="col-12 md:col-8 content-padding md:bg-none bg-mobile">
+        <div class="title-banner block md:hidden">
+            <h1>A few clicks away from being a part of Axdif</h1>
+        </div>
+        <h1 class="title-content hidden md:block">axdif</h1>
+        <div class="bg-white py-3 px-3 md:py-5 md:px-5 mb-2 md:mb-0 md:bg-none" style="border-radius: 10px;">
+            <div class="grid md:flex gap-3 justify-content-center text-center md:justify-content-start md:text-left">
+                <img src="assets/img/img-1.svg" class="image" alt="" >
+                <div class="w-label">
+                    <h5 class="w-label font-bold font-['Poppins'] font-[18px] text-[#12204D] mb-1">Verify your account</h5>
+                    <p class="w-label font-medium font-['Poppins'] font-[14px] text-[#12204D]">A verification link has been sent to your email account</p>
+                </div>
+            </div>
+            <div class="display-grid md:flex gap-3 md:pl-6 mt-5 justify-content-center text-center md:justify-content-start md:text-left justify-items-center">
+                <div class="squre"></div>
+                <img src="assets/img/img-2.svg" class="image" alt="" >
+                <div class="w-label">
+                    <h5 class="w-label font-bold font-['Poppins'] font-[18px] text-[#12204D] mb-1">Login to your account</h5>
+                    <p class="w-label font-medium font-['Poppins'] font-[14px] text-[#12204D]">Login to your Axdif account</p>
+                </div>
+            </div>
+            <div class="display-grid md:flex gap-3 pl-img-3 mt-5 justify-content-center text-center md:justify-content-start md:text-left justify-items-center">
+                <div class="squre"></div>
+                <img src="assets/img/img-3.svg" class="image" alt="" >
+                <div class="w-label">
+                    <h5 class="w-label font-bold font-['Poppins'] font-[18px] text-[#12204D] mb-1">Setup your data</h5>
+                    <p class="w-label font-medium font-['Poppins'] font-[14px] text-[#12204D]">Input your employee data and get the ease of managing employee</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="col-12 padding-button">
+                    <app-button [label]="'Login to Axdif'" [class]="'danger'" (toggleEvent)="redirect()"></app-button>
+                </div>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="col-12 text-center md:text-left p-5 md:p-0">
+                <p class="text-white md:text-black">© Copyright 2023. All Right Reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<h5 class="label-form" [id]="id">{{label}}</h5>
+<input *ngIf="type === 'text' || type === 'email'" ngDefaultControl [id]="id" [name]="name" [formControl]="controlName" type="{{ type }}" pInputText [placeholder]="placeHolder"
+maxlength="{{ maxLength }}" class="input-form" />
+<p-password *ngIf="type === 'password'" ngDefaultControl [formControl]="controlName" placeholder="{{placeHolder}}" [toggleMask]="true" class="input-form"></p-password>
+<div *ngIf="type === 'phone'" class="grid formgrid">
+    <div class="col-5 lg:mb-0 pr-1.5">
+        <input type="text" name="codeCountry" [(ngModel)]="codeCountry" pInputText placeholder="Country Code" class="input-form">
+    </div>
+    <div class="col-7 lg:mb-0 pl-0">
+        <p-inputMask mask="999 9999 9999" name="{{name}}" [formControl]="controlName" class="input-form" placeholder="{{placeHolder}}"></p-inputMask>
+    </div>
+</div>

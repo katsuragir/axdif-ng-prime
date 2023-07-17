@@ -1,0 +1,5 @@
+<div class="field-checkbox">
+    <p-checkbox value="true" id="letter" name="{{name}}" [formControl]="controlName" inputId="{{name}}"></p-checkbox>
+    <label for="{{name}}">{{label}}</label>
+    <label *ngIf="static" for="ny">I have read and accept the <a>Terms & Conditions</a> and <a>Privacy Policy</a></label>
+</div>

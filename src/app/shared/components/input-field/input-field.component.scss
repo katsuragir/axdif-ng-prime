@@ -1,0 +1,21 @@
+.input-form {
+    width: 100%;
+}
+
+.label-form {
+    font-family: Proxima Nova;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000037;
+    letter-spacing: 0px;
+    margin-bottom: 8px;
+}
+
+:host ::ng-deep .p-password {
+    width: 100%;
+}
+
+
+:host ::ng-deep .p-inputtext {
+    width: 100%;
+}

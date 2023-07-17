@@ -1,0 +1,71 @@
+<div class="grid overflow-hidden min-w-screen">
+    <div class="block md:hidden col-12 bg-white">
+        <h1 class="text-[#18266A] mb-0">axdif</h1>
+    </div>
+    <div class="md:col-8 card-banner-auth hidden md:block">
+        <div class="grid p-fluid">
+            <div class="col-11" style="margin-top: 100px; margin-left: 30px;">
+                <img src="assets/img/illustration-1@2x.png" style="width: 100%; height: 100%; object-fit: contain;" alt="">
+            </div>
+        </div>
+        <div class="grid copy-right">
+            <div class="col-12 p-5 md:p-0">
+                <p class="text-white md:text-black">© Copyright 2023. All Right Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 md:col-4 content-padding md:bg-none">
+        <div class="w-full surface-card pt-3" style="border-radius:53px">
+            <div class="text-left mb-5">
+                <h1 class="title-content hidden md:block">axdif</h1>
+                <div class="text-900 text-3xl font-bold mb-3">Login to your Account</div>
+                <span class="text-600 font-medium">Hi, welcome back! Select method to login</span>
+            </div>
+
+            <div class="text-left mb-3 grid gap-4 p-fluid pl-3">
+                <div class="col-12 md:col-6">
+                    <p-button label="Google" icon="pi pi-google" styleClass="p-button-outlined p-button-secondary"></p-button>
+                </div>
+                <div class="col-12 md:col-6">
+                    <p-button label="Submit" icon="pi pi-linkedin" styleClass="p-button-outlined p-button-secondary"></p-button>
+                </div>
+            </div>
+
+            <div class="text-left mb-2 grid gap-4 p-fluid pl-3">
+                <p-divider type="solid" styleClass="w-full" align="center" style="width: 100%;">
+                    <span>Or continue with email</span>
+                </p-divider>
+            </div>
+
+            <div>
+                <form [formGroup]="loginFormGroup">
+                <label for="email1" class="block text-900 text-xl font-medium mb-2">Email</label>
+                <input id="email1" type="text" [ngClass]="{'ng-dirty ng-invalid': $any(loginFormGroup).get('email').error?.required === true}" formControlName="email" placeholder="e.g john.doe@mail.com" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
+                <!-- <p-message severity="error" text="Field is required"></p-message> -->
+
+                <label for="password1" class="block text-900 font-medium text-xl mb-2">Password</label>
+                <p-password id="password1" placeholder="Insert Password" [toggleMask]="true" styleClass="mb-5" inputStyleClass="w-full p-3 md:w-30rem" formControlName="password"></p-password>
+
+                <div class="flex align-items-center justify-content-between mb-5 gap-5">
+                    <div class="flex align-items-center">
+                        <p-checkbox id="rememberme1" [binary]="true" styleClass="mr-2"></p-checkbox>
+                        <label for="rememberme1">Remember me</label>
+                    </div>
+                    <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: var(--primary-color)">Forgot password?</a>
+                </div>
+                <button pButton pRipple label="Login" class="w-full p-3 text-xl p-button-danger" styleClass="p-button-danger" (click)="handleSubmit()"></button>
+                </form>
+            </div>
+
+            <div class="grid term-policy">
+                <p class="text-black">Privacy Policy • Terms & Condition</p>
+            </div>
+
+            <div class="grid copy-right md:hidden">
+                <div class="col-12 p-5 md:p-0">
+                    <p class="text-black">© Copyright 2023. All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="grid overflow-hidden min-h-screen min-w-screen">
+    <div class="block md:hidden col-12 bg-white">
+        <h1 class="text-[#18266A] mb-0">axdif</h1>
+    </div>
+    <div class="md:col-4 card-banner-auth hidden md:block">
+        <app-banner-auth></app-banner-auth>
+    </div>
+    <div class="col-12 md:col-8 content-padding md:bg-none bg-mobile">
+        <div class="title-banner block md:hidden">
+            <h1>A few clicks away from being a part of Axdif</h1>
+        </div>
+        <h1 class="title-content hidden md:block">axdif</h1>
+        <div class="bg-white py-3 px-3 md:py-0 md:px-0 rounded-3xl md:rounded-none mb-2 md:mb-0 md:bg-none">
+            <h4 class="subtitle-content">Manage all your employee efficiently</h4>
+            <p class="subtitle">
+                Let’s get you all set up so you can verify your personal account and
+                begin setting up your profile
+            </p>
+            <form [formGroup]="registFormGroup">
+                <!-- Input fields -->
+                <div class="grid">
+                    <div class="col-12">
+                        <div class="grid p-fluid">
+                            <div class="col-12 md:col-6 input-field">
+                                <h5 class="label-form">Company Name</h5>
+                                <input [ngClass]="{'ng-dirty ng-invalid': $any(registFormGroup).get('company').error?.required === true}" id="company" name="company" formControlName="company" type="text" pInputText placeholder="e.g John" class="input-form" />
+                            </div>
+                            <div class="col-12 md:col-6 input-field">
+                                <h5 class="label-form">Fullname</h5>
+                                <input ngDefaultControl id="fullname" name="fullname" formControlName="fullName" type="text" pInputText placeholder="e.g Doe" class="input-form" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="grid p-fluid">
+                            <div class="col-12 md:col-6 input-field">
+                                <h5 class="label-form">Email</h5>
+                                <input ngDefaultControl id="email" name="email" formControlName="email" type="text" pInputText placeholder="e.g john.doe@mail.com" class="input-form" />
+                            </div>
+                            <div class="col-12 md:col-6 input-field">
+                                <h5 class="label-form">Phone Number (Optional)</h5>
+                                <div class="grid formgrid">
+                                    <div class="col-5 lg:mb-0 pr-1.5">
+                                        <input type="text" name="codeCountry" formControlName="codeCountry" pInputText placeholder="Country Code" class="input-form">
+                                    </div>
+                                    <div class="col-7 lg:mb-0 pl-0">
+                                        <p-inputMask mask="999 9999 9999" name="phone" formControlName="phone" class="input-form" placeholder="e.g 821 2345 6789"></p-inputMask>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="grid p-fluid">
+                            <div class="col-12 md:col-6 input-field">
+                                <h5 class="label-form">Password</h5>
+                                <p-password formControlName="password" placeholder="Insert Password" [toggleMask]="true" class="input-form"></p-password>
+                            </div>
+                            <div class="col-12 md:col-6 input-field">
+                                <h5 class="label-form">Confirm Password</h5>
+                                <p-password formControlName="confirm" placeholder="Confirm Password" [toggleMask]="true" class="input-form"></p-password>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="col-12" style="padding-top: 10px; padding-bottom: unset;">
+                        <div class="field-checkbox">
+                            <p-checkbox value="true" id="letter" name="letter" formControlName="letter" inputId="letter"></p-checkbox>
+                            <label for="letter">Yes I want to receive Axdif’s Newsletter</label>
+                        </div>
+                    </div>
+                    <div class="col-12" style="padding-top: unset; padding-bottom: 10px;">
+                        <div class="field-checkbox">
+                            <p-checkbox value="true" id="term" name="term" formControlName="term" inputId="term"></p-checkbox>
+                            <label for="term">I have read and accept the <a>Terms & Conditions</a> and <a>Privacy Policy</a></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="col-12">
+                        <app-button [label]="'Submit'" [class]="'danger'" (toggleEvent)="handleSubmit()"></app-button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="grid">
+            <div class="col-12 text-center md:text-left p-5 md:p-0">
+                <p class="text-white md:text-black">© Copyright 2023. All Right Reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
